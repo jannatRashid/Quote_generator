@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+}
+
+body {
+    min-height: 100vh; 
+    transition: 0.5s; 
+    transition-timing-function: ease-in; 
+    background-image: linear-gradient(to right bottom, #b6b6dd, #31314b);
+}
+
+.quote_box {
+    background: white;
+    width: 90%; /* Adjusted width for responsiveness */
+    max-width: 700px; /* Added max-width for larger screens */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 10px 10px 28px 0px rgb(0, 0, 0); 
+}
+
+.quote_box h2 {
+    font-size: 35px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.quote_box h2::after {
+    content: "";
+    width: 75px;
+    height: 3px;
+    border-radius: 3px;
+    background: rgb(34, 34, 75);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.quote_box blockquote {
+    font-size: 28px;
+    min-height: 110px;
+}
+
+.quote_box blockquote::before,
+.quote_box blockquote::after {
+    content: '"';
+}
+
+.quote_box span {
+    display: block;
+    margin-top: 10px;
+    float: right;
+    position: relative;
+}
+
+.quote_box span::before {
+    content: ' ';
+    width: 20px;
+    height: 2px;
+    background: rgb(34, 34, 75);
+    position: absolute;
+    top: 50%;
+    left: -30px;
+}
+
+.quote_box div {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.quote_box button {
+    background-image: linear-gradient(to right bottom, #b6b6dd, #31315e);
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* Media Query for Responsive Design */
+@media screen and (max-width: 768px) {
+    .quote_box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .quote_box h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .quote_box blockquote {
+        font-size: 24px;
+    }
+
+    .quote_box span::before {
+        left: -20px;
+    }
+}
